@@ -1,0 +1,138 @@
+.container{
+  height: 100%;
+  padding:0 160px;
+  position: relative;
+}
+
+.social{
+  position: fixed;
+  right: 12px;
+  top: 50vh;
+
+  display: flex;
+  flex-direction: column;
+}
+.social svg{
+  margin-bottom: 8px;
+}
+.social svg:hover{
+  color: #DCC7BC;
+  cursor: pointer;
+}
+
+.home{
+  height: 100vh;
+
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+
+  align-items: center;
+  justify-content: center;
+
+}
+.home p{
+  font-size: 36px;
+  line-height: 150%;
+  color: #DCC7BC;
+}
+.home p strong{
+  font-size: 72px;
+  color:#444053 ;
+}
+
+.about{
+    height: 100vh;
+    display: flex;  
+    flex-direction: column;
+    align-items: center;
+}
+.about div{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  align-items: center;
+}
+.about div p{
+  text-align: justify;
+  font-weight: 500;
+}
+
+.products{
+  display: flex;  
+  flex-direction: column;
+  align-items: center;
+
+}
+.products div {
+  margin-top: 36px;
+
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+
+}
+.products div img{
+  border-radius: 16px;
+  transition: transform .2s;
+}
+.products div img:hover{
+  transform: scale(1.5);
+  cursor: pointer;
+}
+
+.contact{
+  padding: 12px 0;
+  display: flex;  
+  flex-direction: column;
+  align-items: center;
+}
+.contact svg{
+  margin-left: 8px;
+}
+
+.contact svg:hover{
+  color: #DCC7BC;
+  cursor: pointer;
+}
+
+.footer{
+  background-color: #DCC7BC;
+  color: #000;
+  height: 65px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.footer span{
+  font-size: 16px;
+}
+
+@media only screen and (max-width: 1000px) {
+  
+  .social{
+    position: absolute;
+  }
+
+  .home, .about div{
+    display: flex;
+    flex-direction: column;
+  }
+  .home p{
+    text-align: center;
+  }
+
+  .products div{
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+}
+
+@media only screen and (max-width:600px) {
+  .container{
+    padding: 40px;
+  }
+  .products div{
+    grid-template-columns: 1fr;
+  }
+}
